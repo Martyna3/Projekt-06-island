@@ -9,35 +9,403 @@
 
 
 body {
-    margin: 0;
     padding: 0;
     background-color: #f5f5f5;
     font-family: 'Merriweather', serif;
     font-size: 16px;
     line-height: 1.6;
+    margin: 0;
 }
-
 
 /* HLAVICKA */
 
 .titulek {
     font-family: 'Raleway', serif;
+    text-align: center;
+    font-size: 40px;
+    margin: 10px 0;
+
 }
 
+.hlavicka {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/island-hlavicka.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    width: 100%;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.perex {
+    padding: 10px 25px;
+}
+
+.autor {
+    opacity: 60%;
+    position: relative;
+    padding-bottom:20px;
+    margin-top: 40px;
+}
+
+.autor::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    left: calc(50% - 20px);
+    top: -40%;
+}
 
 /* MENU */
 
+a {
+    text-decoration: none;
+    color: lightgray
+}
 
+li {
+    list-style: none;
+    border-bottom: 1px solid rgb(238, 236, 236);
+    padding: 5px;
+    font-size: 10px;
+}
+
+.menu{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 20px 0 20px;
+    padding: 0;
+}
+
+/* OBSAH */
+
+img {
+    width: 100%;
+}
+
+p {
+    font-size: 12px;
+    margin: 10px 5px;
+}
+
+.par {
+    margin: 40px 15px;
+}
+
+.popis {
+    text-align: center;
+    margin-top: 0;
+    color: gray;
+    font-size: 8px;
+    font-weight: 300;
+
+}
+
+.popis a{
+    text-decoration: underline;
+    color: gray;
+}
+
+section {
+    padding-top: 5px;
+}
+
+/* PSEUDOPRVEK */
+
+h2{
+    position: relative;
+    margin-left: 20px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: rgb(102, 159, 245);
+    position: absolute;
+    top: 160%;
+    left: -40px;
+}
+
+/* FOTOGALERIE */
+
+.foto {
+    padding-bottom: 10px;
+}
+
+.popisek {
+    text-align: center;
+    margin-top: 0;
+    color: gray;
+    font-size: 8px;
+    font-weight: 600;
+
+}
+
+.popisek a{
+    text-decoration: underline;
+    color: gray;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 0;
+    color: gray;
+    font-size: 8px;
+    font-weight: 300;
+}
+
+.galerie {
+    margin-top: 40px;
+    box-shadow: 4px 4px 4px black; 
+}
+
+/* PATICKA */
+
+.footer {
+    background-color: rgba(238, 235, 235, 0.958);
+    padding: 20px 50px 0 20px;
+    color: darkgray;
+}
+
+.footer a{
+    text-decoration: underline;
+    color: darkgray;
+}
+
+.foot {
+    font-size: 8px;
+}
+
+.last {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 500px) {
+
+.titulek {
+    font-size: 60px;
+}
+
+.autor {
+    padding-bottom: 30px;
+}
+
+.uvod {
+    border-left: none;
+}
+
+.fotogal {
+    border-right: none;
+}
+
+/* MENU */
+
+.menu {
+    display: flex;
+}
+
+li {
+    border: 1px solid rgb(238, 236, 236);
+    flex: 1 1 calc(100%/4);
+}
+
+/* POPISEK */
+
+.popis {
+    text-align: right;
+    margin-top: 0;
+    color: white;
+    font-size: 8px;
+    font-weight: 300;
+    position: relative;
+    bottom: 30px;
+    right: 10px;
+}
+
+.popis a{
+    text-decoration: underline;
+    color: white;
+}
+
+/* FOTOGALERIE */
+
+.galerie {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.foto {
+    flex: 0 1 calc(100%/2);
+    padding: 0;
+}
+
+img {
+    display: block;
+}
+
+.popisek {
+    display: none;
+}
+
+}
+
+@media (min-width:1000px) {
+
+/* HLAVICKA */
+
+.hlavicka {
+    margin-bottom: -60px;
+    min-height: 400px;
+}
+
+.titulek {
+    font-size: 60px;
+}
+
+.perex {
+    max-width: 600px;
+    margin: auto;
+}
+
+.autor {
+    margin-top: 50px;
+}
+
+/* NEHLAVICKA */
+
+.about {
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    flex: 1 1 40%;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-height: 60px;
+    text-align: left;
+    padding: 40px 0 40px 10px;
+
+}
+
+li {
+    border: none;
+    border-bottom: 1px solid rgb(238, 236, 236);
+    padding: 5px;
+}
+
+.menu a {
+    margin: 0;
+}
+
+.nehlavicka {
+    max-width: 960px;
+    align-content: center;
+    background-color: white;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.11) 0px 0px 15px;
+}
 
 
 /* OBSAH */
 
+h2 {
+    padding-left: 20px;
+    font-size: 30px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: rgb(102, 159, 245);
+    position: absolute;
+    top: 160%;
+    left: -2%;
+}
+
+.par {
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 30px;
+}
+
+.proc{
+    padding-right: 250px;
+}
+
+.co, .coo {
+    padding-left: 250px;
+}
 
 
+/* FOTOGALERIE na desktop*/
 
-/* FOTOGALERIE */
+.galerie{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-shadow: none;
+    margin-top: 60px;
+}
 
+.foto{
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 33%
+}
 
+.foto img{
+    display: block;
+    transition: transform 0.3s; 
+    width: 100%;
+}
 
+.copyright {
+    color: white;
+}
 
-/* PATICKA */
+.copyright a {
+    color: white;
+}
+.popisek {
+    display: inline;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0 ,0, 0.4);
+    color: white;
+    transition: transform 0.3s; 
+    padding: 10px 0;
+    font-size: 10px;
+}
+
+.foto:hover .popisek {
+    transform: translateY(-100%);
+}
+
+.foto:hover img{
+    transform: scale(1.2);
+}
+
+/* FOOTER */
+
+.footer{
+    max-width: 960px;
+    margin: auto;
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+}
+
